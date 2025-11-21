@@ -1,0 +1,9 @@
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: src/dockerfile
+    container_name: telegram_gpt_bot
+    env_file:
+      - .env
+    restart: unless-stopped
