@@ -1,5 +1,5 @@
 from aiogram import F, Dispatcher, Router
-from aiogram.filters import CommandStart
+from aiogram.filters import CommandStart, Command
 from aiogram.types import Message
 
 from src.bot.constants import (
@@ -32,6 +32,7 @@ async def cmd_start(
     )
 
 
+@router.message(Command('help'))
 @router.message(F.text == HELP_BUTTON)
 async def cmd_help(
     message: Message,
