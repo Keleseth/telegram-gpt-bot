@@ -7,8 +7,6 @@ from aiogram.client.session.aiohttp import AiohttpSession
 from groq import AsyncGroq
 
 from src.bot.core.logger_messages import (
-    BOT_STARTED,
-    BOT_STARTUP_ERROR,
     LOGGER_BOT_STARTED,
     LOGGER_BOT_STARTUP_ERROR
 )
