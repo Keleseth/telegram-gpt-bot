@@ -1,8 +1,8 @@
-from aiogram import F, Dispatcher, Router
+from aiogram import F, Router
 from aiogram.filters import CommandStart, Command
 from aiogram.types import Message
 
-from src.bot.constants import (
+from src.bot.core.constants import (
     GREETING,
     HELP,
     HELP_BUTTON,
