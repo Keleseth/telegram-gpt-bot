@@ -1,12 +1,30 @@
+# Virtual environments
 venv/
-__pycache__/
-logs/
-
-docker-compose.yml
-.dockerignore
-Dockerfile
-
 .env
 .env.example
 
+# Python caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
+
+# Tests
+tests/
+
+# Git
 .git/
+.gitignore

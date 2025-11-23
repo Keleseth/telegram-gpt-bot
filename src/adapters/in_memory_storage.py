@@ -1,6 +1,10 @@
 from dataclasses import dataclass, field
 
-from src.bot.core.constants import GPT_SYSTEM_PROMPT
+from src.bot.core.constants import (
+    CONTENT,
+    GPT_SYSTEM_PROMPT,
+    ROLE
+)
 
 
 @dataclass(slots=True)
@@ -25,15 +29,15 @@ class InMemoryDialogStorage:
         Создает и/или обновляет диалог пользователя в памяти и возвращает
         обновленный список сообщений диалога.
         """
-        user_dialog = self.dialogs.get(user_id, [GPT_SYSTEM_PROMPT])
-        user_dialog.append(
+        dialog = self.dialogs.get(user_id, [GPT_SYSTEM_PROMPT])
+        dialog.append(
             {
-                'role': role,
-                'content': content
+                ROLE: role,
+                CONTENT: content
             }
         )
-        self.dialogs[user_id] = user_dialog
-        return user_dialog
+        self.dialogs[user_id] = dialog
+        return dialog
 
     async def reset_dialog(
         self,

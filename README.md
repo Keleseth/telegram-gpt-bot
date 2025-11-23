@@ -66,10 +66,11 @@ git clone https://github.com/Keleseth/telegram-gpt-bot
 cd telegram-gpt-bot
 ```
 2. Создать `.env` по примеру выше.
-3. Установить зависимости:
+3. Установить зависимости из файла dev_requirements.txt если нужно выполнять Pytest тесты или requirements.txt для прод-версии:
 ```bash
 pip install -r requirements.txt
 ```
+
 4. Запустить:
 ```bash
 python -m src.bot.main
@@ -90,12 +91,11 @@ docker compose up -d --build
 
 ## Планы по улучшению
 1. Redis хранилище (LPUSH + LTRIM для истории диалога).
-2. Unit и интеграционные тесты (aiogram handlers + storage).
+2. Расширить базу тестов. Добавить к существующим Unit-тесты для handlers бота, а также интеграционные тесты.
 3. CI/CD (GitHub Actions: lint, tests, build image).
 4. Тримминг истории или.
 5. Лимитированеи для пользователей.
 7. Расширяемая конфигурация модели - ООП реализация модели.
-8. Облагораживание UI.
 
 ---
 
