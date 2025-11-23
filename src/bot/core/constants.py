@@ -26,5 +26,10 @@ HELP_BUTTON = 'ℹ️ Помощь'
 USER_ROLE = 'user'
 ASSISTANT_ROLE = 'assistant'
 
+# Grok API ожидаемые ключи обращения
+CONTENT = 'content'
+ROLE = 'role'
+SYSTEM = 'system'
+
 # Grok дефолтная модель
 DEFAULT_GROK_MODEL = 'llama-3.3-70b-versatile'
